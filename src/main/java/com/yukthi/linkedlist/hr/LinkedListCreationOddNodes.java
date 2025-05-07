@@ -52,54 +52,6 @@ public class LinkedListCreationOddNodes {
     }
 }
 
-class SinglyLinkedListNode {
-    public int data;
-    public SinglyLinkedListNode next;
-
-    public SinglyLinkedListNode(int data, SinglyLinkedListNode next) {
-        this.data = data;
-        this.next = next;
-    }
-
-
-}
-
-class SinglyLinkedList {
-    public SinglyLinkedListNode head;
-    public SinglyLinkedListNode tail;
-
-    public SinglyLinkedList() {
-        this.head = null;
-        this.tail = null;
-    }
-
-    public void insertNode(int nodeData) {
-        SinglyLinkedListNode node = new SinglyLinkedListNode(nodeData, null);
-        if (head == null) {
-            head = node;
-        } else {
-            tail.next = node;
-        }
-
-        tail = node;
-    }
-
-
-}
-
-
-class SinglyLinkedListPrintHelper {
-    public static void printList(SinglyLinkedListNode node, String separator, BufferedWriter bufferedWriter) throws IOException {
-        while (node != null) {
-            bufferedWriter.write(String.valueOf(node.data));
-            node = node.next;
-            if (node != null) {
-                bufferedWriter.write(separator);
-            }
-        }
-    }
-}
-
 
 class Result {
 
